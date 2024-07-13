@@ -4,6 +4,11 @@
 
 - Go is a statically typed, compiled high-level programming language designed at Google by Robert Griesemer, Rob Pike, and Ken Thompson. It is syntactically similar to C, but also has memory safety, garbage collection, structural typing, and CSP-style concurrency.
 
+|Days|Link|Days|Link|Days|Link|Days|Link|
+|---|---|---|---|---|---|---|---|
+|1|[Golang Features](#golang-features)|2|[Reasons to choose golang](#5-reasons-to-choose-golang)|3|[Installation](#go-installation-and-hello-world)|4|[Simple Variables](#simple-valuesdatatypes)|
+|5|[Constants](#constants-in-go)|
+
 ##
 
 #Day1
@@ -140,5 +145,34 @@ func main() {
 	price := 50.5
 
 	fmt.Println(price)
+}
+```
+
+##
+
+#Day5
+### Constants in Go
+- Constant are the fixed value which does not change over time like other variables created using `var` keyword
+- Constant are declared using const keyword in Go.
+- int
+
+```go
+package main
+
+import "fmt"
+
+// const age=30
+// name:="Golang is not allowed outside function/ global variable"
+func main() {
+	// const name string = "Golang"
+
+	// fmt.Println(name)
+
+	const (
+		port = 555
+		host = "localhost"
+	)
+
+	fmt.Println(port, host)
 }
 ```
