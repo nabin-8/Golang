@@ -220,3 +220,37 @@ func main() {
 	}
 }
 ```
+
+##
+
+#Day6
+### Conditional statement if-else
+- go does not have `ternary` in version 1.22
+```go
+
+	age := 16
+
+	if age >= 18 {
+		fmt.Println("Person is an adult")
+	} else {
+		fmt.Println("Person is not an adult")
+	}
+
+	if age >= 18 {
+		fmt.Println("Person is not an adult")
+
+	} else if age >= 12 {
+		fmt.Println("Person is Teneger")
+	} else {
+		fmt.Println("Person is kid")
+	}
+
+	// we can declare a variable inside if
+	if age := 15; age >= 18 {
+		fmt.Println("Person is an adult", age)
+	} else if age >= 12 {
+		fmt.Println("Persion is teenager", age)
+	}
+
+	// go does not have ternary, you will have to use normal if-else
+```
