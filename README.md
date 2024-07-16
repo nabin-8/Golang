@@ -254,3 +254,28 @@ func main() {
 
 	// go does not have ternary, you will have to use normal if-else
 ```
+
+
+##
+
+#Day7
+### Switch statement in go
+- switch is used to check multiple conditions
+```go
+	// type switch
+	whoAMI := func(i interface{}) {
+		switch t := i.(type) {
+		case int:
+			fmt.Println("its an integer")
+		case string:
+			fmt.Println("its an string")
+		case bool:
+			fmt.Println("its an bool")
+		default:
+			fmt.Println("other", t)
+
+		}
+	}
+
+	whoAMI(11)
+```
