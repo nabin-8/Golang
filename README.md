@@ -279,3 +279,27 @@ func main() {
 
 	whoAMI(11)
 ```
+##
+
+#Day7
+### Arrays in go
+- Arrays are numbered sequence of specific length
+- when do we use array in golang
+	- fixed size, that is predictable
+	- Memory optimization
+	- Contant time access
+```go
+var nums [4]int
+
+	// array length
+	nums[0] = 1
+	fmt.Println(len(nums))
+	
+	// to declare in single line
+	nums := [3]int{1, 2, 3}
+	fmt.Println(nums)
+
+	// 2d array
+	nums := [2][2]int{{1, 2}, {3, 4}}
+	fmt.Println(nums)
+```
