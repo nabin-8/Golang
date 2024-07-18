@@ -7,7 +7,8 @@
 |Days|Link|Days|Link|Days|Link|Days|Link|
 |---|---|---|---|---|---|---|---|
 |1|[Golang Features](#golang-features)|2|[Reasons to choose golang](#5-reasons-to-choose-golang)|3|[Installation](#go-installation-and-hello-world)|4|[Simple Variables](#simple-valuesdatatypes)|
-|5|[Constants](#constants-in-go)|
+|5|[Constants](#constants-in-go)|6|[Loop](#looping-in-golang)|7|[Condition](#conditional-statement-if-else)|8|[switch](#switch-statement-in-go)|
+|9|[Array](#arrays-in-go)|10|[slices](#slices)|
 
 ##
 
@@ -179,7 +180,7 @@ func main() {
 
 ##
 
-#Day5
+#Day6
 ### Looping in Golang
 - In Golang there is only way to looping is `for` loop.
 - we can achieve `infinite` loop and there is one new feature comes in golang 1.22 which is `range` given example below.
@@ -223,7 +224,7 @@ func main() {
 
 ##
 
-#Day6
+#Day7
 ### Conditional statement if-else
 - go does not have `ternary` in version 1.22
 ```go
@@ -258,7 +259,7 @@ func main() {
 
 ##
 
-#Day7
+#Day8
 ### Switch statement in go
 - switch is used to check multiple conditions
 ```go
@@ -281,7 +282,7 @@ func main() {
 ```
 ##
 
-#Day7
+#Day9
 ### Arrays in go
 - Arrays are numbered sequence of specific length
 - when do we use array in golang
@@ -302,4 +303,34 @@ var nums [4]int
 	// 2d array
 	nums := [2][2]int{{1, 2}, {3, 4}}
 	fmt.Println(nums)
+```
+
+##
+
+#Day10
+### Slices
+- slices -> dynamic array
+- most used cobstruct in go
+- +useful methods
+```go
+	// unitinilize slice is nil
+	var nums []int
+
+	var nums = make([]int, 0, 5)
+	// capacity -> maximum number of elements can fit
+
+	// slice operator
+	var nums = []int{1, 2, 3, 4, 5}
+	fmt.Println(nums[0:2])
+	fmt.Println(nums[1:])
+
+	fmt.Println(cap(nums))
+	var nums = make([]int, 0, 5)
+	nums = append(nums, 2)
+	var nums2 = make([]int, len(nums))
+	// copy function
+	copy(nums2, nums)
+	fmt.Println(nums, nums2)
+
+	var nums = [][]int{{1, 2, 3}, {4, 5, 6}}
 ```
