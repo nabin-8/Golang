@@ -8,7 +8,7 @@
 |---|---|---|---|---|---|---|---|
 |1|[Golang Features](#golang-features)|2|[Reasons to choose golang](#5-reasons-to-choose-golang)|3|[Installation](#go-installation-and-hello-world)|4|[Simple Variables](#simple-valuesdatatypes)|
 |5|[Constants](#constants-in-go)|6|[Loop](#looping-in-golang)|7|[Condition](#conditional-statement-if-else)|8|[switch](#switch-statement-in-go)|
-|9|[Array](#arrays-in-go)|10|[slices](#slices)|
+|9|[Array](#arrays-in-go)|10|[slices](#slices)|11|[maps-in-golang](#maps-in-golang)|
 
 ##
 
@@ -333,4 +333,45 @@ var nums [4]int
 	fmt.Println(nums, nums2)
 
 	var nums = [][]int{{1, 2, 3}, {4, 5, 6}}
+```
+
+##
+
+#Day11
+
+### Maps in Golang
+- maps are like: maps -> hash tables, object, dict
+- way to declare maps in golang
+```go
+m := make(map[string]string)
+// another way
+m1 := map[string]int{"price": 40, "age": 20, "phones": 3}
+// (map[key]value)
+```
+- way to add and get data and check
+```go
+	m := make(map[string]int)
+	// add data
+	m["age"] = 30
+	m["price"] = 50
+	// print,get data
+	fmt.Println(m["age"])
+
+	// check data
+	k, ok := m["age"]
+	fmt.Println(k)
+
+	if ok {
+		fmt.Println("all ok")
+	} else {
+		fmt.Println("not ok")
+	}
+```
+- way to delete data and map
+```go
+	// to delete
+	delete(m, "price")
+	// to clear map
+	clear(m)
+	fmt.Println(len(m))
 ```
