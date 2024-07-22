@@ -398,3 +398,56 @@ m1 := map[string]int{"price": 40, "age": 20, "phones": 3}
 		fmt.Println(i, string(c))
 	}
 ```
+##
+
+#Day13
+
+### Functions
+- In Go, functions are first-class values. This means that you can do with functions the same things you can do with all other values - assign functions to variables, pass them as arguments to other functions or even return functions from other functions.
+
+```go
+func add(a, b int) int {
+	return a + b
+}
+
+func main() {
+	result := add(5, 5)
+	fmt.Println(result)
+}
+```
+- return multiple values
+```go
+func getLanguages() (string, string, bool) {
+	return "Golang", "Javascript", true
+}
+func main(){
+	lang1, lang2, _ := getLanguages()
+	fmt.Println(lang1, lang2)
+}
+```
+- pass function as an argument
+```go
+func processIt(fn func(a int) int) {
+	fn(1)
+}
+
+func main(){
+	fn := func(a int) int {
+		return 2
+	}
+	processIt(fn)
+}
+```
+- function return function
+```go
+func processIt() func(a int) int {
+	return func(a int) int {
+		return 4
+	}
+}
+
+func main(){
+	fn := processIt()
+	fn(6)
+}
+```
