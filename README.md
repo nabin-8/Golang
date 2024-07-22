@@ -8,7 +8,7 @@
 |---|---|---|---|---|---|---|---|
 |1|[Golang Features](#golang-features)|2|[Reasons to choose golang](#5-reasons-to-choose-golang)|3|[Installation](#go-installation-and-hello-world)|4|[Simple Variables](#simple-valuesdatatypes)|
 |5|[Constants](#constants-in-go)|6|[Loop](#looping-in-golang)|7|[Condition](#conditional-statement-if-else)|8|[switch](#switch-statement-in-go)|
-|9|[Array](#arrays-in-go)|10|[slices](#slices)|11|[maps-in-golang](#maps-in-golang)|
+|9|[Array](#arrays-in-go)|10|[slices](#slices)|11|[maps-in-golang](#maps-in-golang)|12|[range](#range-in-golang)|
 
 ##
 
@@ -374,4 +374,27 @@ m1 := map[string]int{"price": 40, "age": 20, "phones": 3}
 	// to clear map
 	clear(m)
 	fmt.Println(len(m))
+```
+
+##
+
+#Day12
+
+### Range in Golang
+- iterating over data structure
+```go
+	m := map[string]string{"fname": "john", "lname": "doe"}
+		for k, v := range m {
+			fmt.Println(k, v)
+		}
+
+	// i starting byte of rune	// i starting byte of rune
+	// c is unicode
+	for i, c := range "Golang" {
+		fmt.Println(i, string(c))
+	}
+	// c is unicode
+	for i, c := range "Golang" {
+		fmt.Println(i, string(c))
+	}
 ```
