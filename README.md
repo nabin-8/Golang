@@ -9,6 +9,7 @@
 |1|[Golang Features](#golang-features)|2|[Reasons to choose golang](#5-reasons-to-choose-golang)|3|[Installation](#go-installation-and-hello-world)|4|[Simple Variables](#simple-valuesdatatypes)|
 |5|[Constants](#constants-in-go)|6|[Loop](#looping-in-golang)|7|[Condition](#conditional-statement-if-else)|8|[switch](#switch-statement-in-go)|
 |9|[Array](#arrays-in-go)|10|[slices](#slices)|11|[maps-in-golang](#maps-in-golang)|12|[range](#range-in-golang)|
+|13|[Functions](#functions)|14|[variadic variadic-functionsfunctions](#variadic-functions)|
 
 ##
 
@@ -449,5 +450,38 @@ func processIt() func(a int) int {
 func main(){
 	fn := processIt()
 	fn(6)
+}
+```
+
+##
+
+#Day13
+
+### Variadic Functions
+- The function that is called with the varying number of arguments is known as variadic function.
+- like:
+```go
+fmt.Println(1, 2, 3, 4, 5, "hello")
+```
+- Let's make custom Variadic Functions
+```go
+package main
+
+import "fmt"
+
+func sum(nums ...int) int {
+	total := 0
+
+	for _, num := range nums {
+		total = total + num
+	}
+	return total
+}
+
+func main() {
+
+	nums := []int{3, 4, 5, 6}
+	result := sum(nums...)
+	fmt.Println(result)
 }
 ```
